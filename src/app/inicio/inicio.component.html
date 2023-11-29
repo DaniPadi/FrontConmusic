@@ -1,0 +1,15 @@
+<div id="div-main">
+  <nav id="nav-superior">
+    <img (click)="login()" src="../../assets/Logo.png" />
+    <h1>Mi música</h1>
+    <img src="../../assets/Perfil.png" />
+    <button (click)="cerrarSesion()">Cerrar sesion</button>
+  </nav>
+  <nav id="nav-lateral">
+    <img src="../../assets/Casa.png" />
+  </nav>
+  <div id="div-home">
+    <app-home (messageEvent)="receiveMessage($event)"></app-home>
+  </div>
+  <app-reproductor  [repro]="receivedMessage" id="div-reproductor"></app-reproductor>
+</div>

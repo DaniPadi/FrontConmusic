@@ -1,0 +1,15 @@
+<div class="main">
+  <div class="img">
+    <img src="../../assets/image-removebg-preview__2_-removebg-preview.png">
+  </div>
+  <div class="login-main">
+    <h1>CONMUSIC</h1>
+    <form (ngSubmit)="loger()" method="post">
+      <input required name="correo" [(ngModel)]="persona.correo" type="email" placeholder="email" />
+      <input required type="password" name="pass" [(ngModel)]="persona.pass" placeholder="password" />
+    </form>
+    <h1 *ngIf="message">{{message}}</h1>
+    <button type="submit" (click)="loger()" class="btn-send">Enviar</button>
+    <button (click)="register()" class="btn-send">Registrarse</button>
+  </div>
+</div>
